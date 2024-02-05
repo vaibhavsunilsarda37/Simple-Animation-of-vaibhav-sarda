@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #2ecc71; /* Fresh green background color */
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .github-name {
+            font-size: 2em;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            font-weight: bold;
+            animation: typeAnimation 3s steps(14, end), burstAnimation 1s ease-in-out 1s;
+        }
+
+        @keyframes typeAnimation {
+            from {
+                width: 0;
+            }
+        }
+
+        @keyframes burstAnimation {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(5);
+                opacity: 0;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const githubName = 'VaibhavSarda';
+            const githubNameElement = document.querySelector('.github-name');
+            
+            githubNameElement.textContent = githubName;
+        });
+    </script>
+</head>
+<body>
+    <div class="github-name"></div>
+</body>
+</html>
